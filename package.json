@@ -1,0 +1,9 @@
+{
+  "name": "stripe-checkout-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "stripe": "^14.0.0"
+  }
+}
