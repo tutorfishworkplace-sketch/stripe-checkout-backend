@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).send("Method not allowed");
 
   const { studentRecordId, quantity, parentEmail } = req.body || {};
-  if (!studentRecordId || !quantity) return res.status(400).json({ error: "Missing studentRecordId or quantity" });
+  if (!studentRecordId) return res.status(400).json({ error: "Missing studentRecordId" });
 
   const session = await stripe.checkout.sessions.create({
     mode: "payment",
